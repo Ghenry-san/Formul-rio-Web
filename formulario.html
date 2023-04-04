@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 
+     Formulário
+    </title>
+    <link rel="stylesheet" type="text/css" href="Oestilo.css">
+    <link rel="icon" type="image/svg" sizes="32x32" href="https://upload.wikimedia.org/wikipedia/commons/1/15/Logotipo_IFET.svg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <form action="/pagina-processa-dados-do-form" method="post" id="formRecrutamento">
+      
+      <center>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Logotipo_IFET.svg" width="100" height="138">
+        </center>
+    <h1 id="titulo">Formulário de Recrutamento</h1>
+
+    <section id="dados" class="box" >
+      <h2 id="dtitulo">Dados Pessoais</h2>
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required>
+        
+        <label for="data-nascimento">Data de Nascimento:</label>
+        <input type="date" id="data-nascimento" name="data-nascimento" required>
+  
+        <label for="Gênero">Gênero:</label>
+        <select id="Gênero" name="Gênero" required>
+          <option value="Masculino">Masculino</option>
+          <option value="Feminino">Feminino</option>
+          <option value="Outro">Outro</option>
+        </select>
+  
+        <label for="nacionalidade">Nacionalidade:</label>
+        <input type="text" id="nacionalidade" name="nacionalidade" required>
+  
+        <label for="E-mail">E-mail:</label>
+        <input type="email" id="E-mail" name="E-mail" required>
+        
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" required>
+        
+        <div>
+          <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required>
+        
+        <label for="estado">Estado:</label>
+        <select id="estado" name="estado" required>
+          <option value="">Selecione...</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
+        </div>
+    
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep">
+    
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" required>
+    </section>
+
+    <section  id="formação" class="box" data-aos="fade-up">
+      <h2 id="dformação">Formação Acadêmica</h2>
+      <label><input type="checkbox" name="formacao" value="informatica">Técnico em Informática</label>
+      <label><input type="checkbox" name="formacao" value="ads">Técnologo em Análise e Desenvolvimento de Sistemas</label><br>
+      
+      <h3>Além da formação técnica profissional ofertada no IFTO, já possui algum outro tipo de curso?</h3>
+      <label for="Curso"></label>
+      <select id="Curso" name="Curso" onchange="mostrarCurso(this.value)">
+        <option value="Não Possuo">Não possuo</option>
+        <option value="Possuo">Possuo</option>
+        </select>
+        <div id="curso-outro" style="display:none;">
+            <label for="Curso-outro">Curso(s):</label>
+            <textarea name="Curso-outro"></textarea>
+        </div>
+      
+    </section>
+
+    <section id="experiências" class="box" data-aos="fade-down">
+      <h2>Experiências Profissionais</h2>
+      <label for="Experiência"></label>
+      <select id="Experiência" name="Experiência" onchange="mostrarCampoOutro(this.value)">
+        <option value="Não Possuo">Não possuo</option>
+        <option value="Possuo">Possuo</option>
+        </select>
+        <div id="campo-outro" style="display:none;">
+            <label for="Experiência-outro">Experiência:</label>
+            <input type="text" id="Experiência-outro" name="Experiência-outro">
+            <label>Última ou Atual Empresa: <input type="text" name="ultima_empresa"></label><br>
+            <label>Cargo: <input type="text" name="cargo"></label><br>
+            <label>Período de Atuação (Mês/Ano – Mês/Ano): <input type="text" name="periodo_atuacao"></label><br>
+            <label>Principais Atividades e Responsabilidades: <textarea name="atividades_responsabilidades"></textarea></label><br>
+            <label>Se você possui mais experiências profissionais, liste-as abaixo (opcional): <textarea name="outras_experiencias"></textarea></label><br>
+        </div>
+
+      
+      <h2>Experiências Adicionais</h2>
+      <label>Empresa: <input type="text" name="empresa_adicional"></label><br>
+      <label>Cargo: <input type="text" name="cargo_adicional"></label><br>
+      <label>Período de Atuação (Mês/Ano – Mês/Ano): 
+        <input type="text" name="periodo_atuacao_adicional"></label><br>
+      <label>Atividades e Responsabilidades: 
+        <textarea name="atividades_responsabilidades_adicional"></textarea>
+      </label><br>
+    </section>
+
+    <section id="habilidades" class="box" data-aos="zoom-in">
+      <h2 id="htitulo">Habilidades Técnicas e Idiomas</h2>
+      <label>Informe quais Habilidades Técnicas Relevantes (softwares, ferramentas, certificações): 
+        <textarea name="habilidades_tecnicas" required></textarea></label><br>
+      <label>Possui habilidades com idiomas?
+        <select id="Idiomas" name="Idiomas" onchange="mostrarNivel(this.value)">
+          <option value="Não Possuo">Não possuo</option>
+          <option value="Possuo">Possuo</option>
+        </select></label><br>
+        <div id="nivel" style="display:none;">
+          <label>Qual Lingua? 
+            <input type="text" id="lingua" name="lingua">
+          </label>
+          <label>Nível de Proficiência (Básico, Intermediário, Avançado, Fluente): 
+            <select name="nivel_idioma">
+              <option value="basico">Básico</option>
+              <option value="intermediario">Intermediário</option>
+              <option value="avancado">Avançado</option>
+              <option value="fluente">Fluente</option>
+          </select></label><br>
+        </div>
+      
+      <h2 id="htitulo">Habilidades Comportamentais</h2>
+      <h5>Liste três habilidades comportamentais que você considera serem suas principais qualidades profissionais</h5>
+      <label>Habilidade 1: <input type="text" name="habilidade1" required></label><br>
+      <label>Habilidade 2: <input type="text" name="habilidade2" required></label><br>
+      <label>Habilidade 3: <input type="text" name="habilidade3" required></label><br>
+    </section>
+
+    <section id="adicionais" class="box" data-aos="fade-up">
+      <div class="form-group">
+        <h2 id="atitulo">Informações Adicionais</h2>
+        <label>Pretensão Salarial: 
+          <input type="text" id="pretensao-salarial" name="pretensao-salarial" required> </label>
+      </div>
+
+      <div class="form-group">
+        <label for="disponibilidade">Disponibilidade para Início:</label>
+        <input type="date" id="disponibilidade" name="disponibilidade" required>
+      </div>
+      
+    </section>
+
+    <center>
+      <div class="submit" >
+        <input type="submit" value="Enviar" id="Enviar">
+      </div>
+    </center>
+
+    </form>
+  <script src="arquivo.js"></script>
+  <script src="scroll.js"></script>
+  <script src="validações.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+</body>
+</html>

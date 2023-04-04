@@ -1,0 +1,87 @@
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+#titulo{
+    text-align: center;
+    color: #420303;
+}
+
+.box {
+    border-radius: 9px;
+    background-color: #052c0813;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    opacity: 100;
+    transition: opacity 0.5s ease-in-out;
+    color: #052c08;
+    font-size: 18px;
+}
+
+#dtitulo {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+    color: #052c08;
+}
+
+#dformação {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+    color: #052c08;
+}
+
+#htitulo{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+    color: #052c08;
+}
+
+#atitulo{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+    color: #052c08;
+}
+form {
+    background-color: #d7ffb0;
+    color: #052c08;
+    font-size: 18px;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    opacity: 100;
+    transition: opacity 0.5s ease-in-out;
+}
+
+label {
+    display:block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="date"], input[type="email"], select, textarea {
+    border-radius: 10px;
+    border: 1px solid #cccccca2;
+    font-size: 14px;
+    padding: 5px;
+    width: 100%;
+    color: #380e0e;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 10px;
+}
